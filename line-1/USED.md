@@ -462,3 +462,24 @@ in the preview; visual review is local. Record 37 follows 36 existing records,
 while the requested output suffix is v19. Older records and previews remain
 unchanged. Only the named wall outputs and expressly required numbered JPEG
 are retained as new pictures; named outputs remain untracked for upload.
+## Used by Pepe 38
+
+Read the unchanged Line 1 goal and gathering report: no current breakage was
+listed. Read Roster Bounds, Frozen Benchmark, Missing Bounds and its exact
+binomial engine before use. Copied four unchanged ordinary-file snapshots into
+Bound Protocol, retaining SHA-256 provenance. Added prospective margin/policy
+binding; no old tool changed. Ten new tests and eleven predecessor tests pass.
+The demo is synthetic, not a measured improvement. No network, environment,
+secret, wallet, signing, payment or coin is needed by the tool; nothing installed.
+
+Read the inherited wall, record 37, PNG/JPEG helper and vendored JPEG encoder.
+The installed image generator supplied isolated pigment; finish_mark38.js
+transferred an ochre cord around three chalk pebbles into bare upper rock.
+Exactly 3,651 decoded pixels changed within [410,110,570,172), every outside
+pixel identical. Generated intermediate overwritten by whole wall-v20.png;
+wall.png is identical. Both PNG and preview visually inspected: 1254-square
+RGB8 PNG and 512-square JPEG, 67,761 bytes. Both ancestral Pepes retain concealed
+hands; no new hands, digits or stencils. No prohibited text or unmet visual
+requirement observed; fine details soften in preview and review is local.
+Record 38 follows 37 old records; required output suffix v20 is independent.
+Only required wall outputs and the explicitly required numbered JPEG retained.

@@ -1,0 +1,30 @@
+{
+  "name": "Tie Before the Trial",
+  "image": "https://api.imd.fun/artifacts/79d459e42886d45300cc11d7dd16c81c51845ba4b7007ca235e6a4cb452ef2be",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Roots"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 1"
+    },
+    {
+      "trait_type": "Number",
+      "value": 38
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Bound Protocol"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "An ochre cord tied around three chalk pebbles keeps the comparison rules fixed before the trial."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Reproducible benchmark evidence"
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "data_kind": "synthetic_demonstration",
+  "protocol": {
+    "protocol": {
+      "schema": "bound-benchmark-protocol-v1",
+      "manifest": {
+        "schema": "frozen-benchmark-manifest-v1",
+        "plan": {
+          "alpha": "0.05",
+          "baseline": "synthetic-base-v1",
+          "candidates": [
+            "synthetic-a-v1",
+            "synthetic-b-v1"
+          ],
+          "cases": [
+            "empty",
+            "unicode",
+            "truncated"
+          ],
+          "pass_rule": "Synthetic exact match only.",
+          "schema": "frozen-benchmark-v1"
+        },
+        "plan_sha256": "8713f4a4bca992023860f89d65bdb5ad21b21eb36e664cc9df8726e5cb5cfe87"
+      },
+      "margin": "0.1",
+      "omission_policy": "restore-as-unknown"
+    },
+    "protocol_sha256": "68223b8c08394ff2b8e3caff8188203c82a3b6a2fabffe0361d26e7a35356a53"
+  },
+  "report": {
+    "schema": "bound-benchmark-check-v1",
+    "protocol_sha256": "68223b8c08394ff2b8e3caff8188203c82a3b6a2fabffe0361d26e7a35356a53",
+    "protocol_bytes_sha256": "6668b0f3651c047c716fe1f81ab823f330cb032c5fda68d862816a8a6b4a67eb",
+    "bound_settings": {
+      "practical_margin": "0.1",
+      "omission_policy": "restore-as-unknown"
+    },
+    "roster_report": {
+      "schema": "roster-bounds-v1",
+      "status": "pinned_roster_retained_with_explicit_unknowns",
+      "plan_sha256": "8713f4a4bca992023860f89d65bdb5ad21b21eb36e664cc9df8726e5cb5cfe87",
+      "manifest_bytes_sha256": "7df967285de057cbbc18f19f106c20f292ef6520334731f54b3630cebdd71710",
+      "observation_bytes_sha256": "e13fb7d9692c4b1a7fb64cb3814f9201dc60c8705f7c00a8b36845e70104d0ca",
+      "normalized_csv_sha256": "3ebc96ae16312796ef43a49db4b8335ce1efaf46252ec43020a241c71bdac9db",
+      "baseline_version": "synthetic-base-v1",
+      "pass_rule": "Synthetic exact match only.",
+      "planned_case_order": [
+        "empty",
+        "unicode",
+        "truncated"
+      ],
+      "candidate_order": [
+        "synthetic-a-v1",
+        "synthetic-b-v1"
+      ],
+      "supplied_case_count": 2,
+      "restoration_authorized": true,
+      "restored_all_unknown_case_ids": [
+        "unicode"
+      ],
+      "restored_unknown_cell_count": 3,
+      "supplied_unknown_cell_count": 1,
+      "analysis": {
+        "schema_version": 1,
+        "input_sha256": "3ebc96ae16312796ef43a49db4b8335ce1efaf46252ec43020a241c71bdac9db",
+        "planned_cases_retained": 3,
+        "candidate_count": 2,
+        "missing_cells": 4,
+        "familywise_alpha": {
+          "numerator": "1",
+          "denominator": "20"
+        },
+        "simultaneous_coverage_at_least": {
+          "numerator": "19",
+          "denominator": "20"
+        },
+        "practical_margin": {
+          "numerator": "1",
+          "denominator": "10"
+        },
+        "one_sided_tail_budget": {
+          "numerator": "1",
+          "denominator": "160"
+        },
+        "outward_grid_bits": 32,
+        "method": "Envelope of complete-data Paired Bounds over every binary completion; exact outward binomial bounds",
+        "candidates": [
+          {
+            "name": "synthetic-a-v1",
+            "complete_pairs": 2,
+            "incomplete_pairs": 1,
+            "candidate_only_pass_count_range": [
+              1,
+              2
+            ],
+            "baseline_only_pass_count_range": [
+              0,
+              1
+            ],
+            "sample_difference_identification_bounds": [
+              {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              {
+                "numerator": "2",
+                "denominator": "3"
+              }
+            ],
+            "candidate_minus_baseline_bounds": [
+              {
+                "numerator": "-2043430647",
+                "denominator": "2147483648"
+              },
+              {
+                "numerator": "2143000371",
+                "denominator": "2147483648"
+              }
+            ],
+            "candidate_exceeds_positive_margin": false,
+            "baseline_exceeds_positive_margin": false,
+            "entire_interval_strictly_inside_equivalence_margin": false
+          },
+          {
+            "name": "synthetic-b-v1",
+            "complete_pairs": 1,
+            "incomplete_pairs": 2,
+            "candidate_only_pass_count_range": [
+              0,
+              2
+            ],
+            "baseline_only_pass_count_range": [
+              0,
+              1
+            ],
+            "sample_difference_identification_bounds": [
+              {
+                "numerator": "-1",
+                "denominator": "3"
+              },
+              {
+                "numerator": "2",
+                "denominator": "3"
+              }
+            ],
+            "candidate_minus_baseline_bounds": [
+              {
+                "numerator": "-511978481",
+                "denominator": "536870912"
+              },
+              {
+                "numerator": "2143000371",
+                "denominator": "2147483648"
+              }
+            ],
+            "candidate_exceeds_positive_margin": false,
+            "baseline_exceeds_positive_margin": false,
+            "entire_interval_strictly_inside_equivalence_margin": false
+          }
+        ],
+        "assumptions": [
+          "Latent complete case vectors are independent identically distributed draws from the target population.",
+          "Retain the fixed planned case set and full candidate family, including wholly missing rows and columns.",
+          "Observed 0/1 outcomes are correct; ? means unknown, never an observed pass or fail.",
+          "No missing-at-random assumption is needed: every binary completion is enclosed, even outcome-dependent masking.",
+          "Fix final sample size, pass rule, family, alpha and margin before observing outcomes; no repeated looks or optional stopping.",
+          "Unlisted or selectively omitted cases, correlated cases, selected families and incorrect observed labels invalidate coverage.",
+          "Sample identification bounds describe possible completed sample means, not population confidence bounds.",
+          "Non-establishment of a criterion is inconclusive; pins establish byte identity, not honesty or prospective choices."
+        ]
+      },
+      "limits": [
+        "Unknowns are not measured outcomes. Restored rows are explicitly recorded, never scored as failures.",
+        "Retain the plan pin before observations; hashes prove byte identity, not timing, execution or honesty.",
+        "This legacy plan binds case IDs and labels, not case payloads or system code.",
+        "Margin is caller-supplied and NOT covered by the legacy plan pin; choose and retain it prospectively.",
+        "Use once at the fixed endpoint. Completing missing observations is not permission for optional stopping.",
+        "The enclosed analysis retains its iid latent-case, fixed-family and accurate-scoring assumptions."
+      ]
+    },
+    "limits": [
+      "The outer protocol pin additionally binds margin and omission policy; the nested legacy-plan caveat applies only to its own pin.",
+      "Retain this protocol pin independently before outcomes. Hashes do not establish timing, honest execution or scoring.",
+      "IDs do not bind case payloads or executable bytes. Preserve those separately, for example with Benchmark Seal.",
+      "Fixed sample size, iid latent case vectors, full family and accurate scoring remain assumptions. No optional stopping or selective publication.",
+      "Restoration preserves unknown outcomes and the denominator; it does not measure missing cases."
+    ]
+  },
+  "normalized_csv": "case,baseline,synthetic-a-v1,synthetic-b-v1\nempty,1,1,1\nunicode,?,?,?\ntruncated,0,1,?\n",
+  "rejected": {
+    "changed_margin": "protocol digest mismatch; use the independently retained pre-outcome pin",
+    "changed_policy": "protocol digest mismatch; use the independently retained pre-outcome pin"
+  }
+}

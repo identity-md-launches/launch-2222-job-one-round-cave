@@ -1,0 +1,32 @@
+{
+  "status": "local_checks_passed",
+  "new_record": 38,
+  "goal_unchanged": true,
+  "older_records_and_previews_unchanged": true,
+  "tracked_and_untracked_changes_within_scope": true,
+  "new_files_outside_artifacts_under_100000_bytes": true,
+  "wall_sha256": "79d459e42886d45300cc11d7dd16c81c51845ba4b7007ca235e6a4cb452ef2be",
+  "wall_dimensions": [
+    1254,
+    1254
+  ],
+  "wall_format": "PNG RGB8",
+  "preview_dimensions": [
+    512,
+    512
+  ],
+  "preview_format": "JPEG SOF0",
+  "preview_bytes": 67761,
+  "tests": [
+    {
+      "command": "python3 -B -m unittest discover -s line-1/tools/bound-protocol -v",
+      "passed": 10
+    },
+    {
+      "command": "python3 -B -m unittest discover -s line-1/tools/roster-bounds -v",
+      "passed": 11
+    }
+  ],
+  "unmet_visual_requirements": [],
+  "authority": "Local checks only, not independent certification."
+}

@@ -1,0 +1,46 @@
+{
+  "wall": "artifacts/line-1/wall-v20.png",
+  "width": 1254,
+  "height": 1254,
+  "format": "PNG RGB8",
+  "bytes": 2873688,
+  "sha256": "79d459e42886d45300cc11d7dd16c81c51845ba4b7007ca235e6a4cb452ef2be",
+  "preview": {
+    "path": "dist/line-1/38.jpg",
+    "width": 512,
+    "height": 512,
+    "format": "JPEG",
+    "bytes": 67761
+  },
+  "ancestor": "artifacts/line-1/wall-v19.png",
+  "ancestor_sha256": "a0df478d8da122e9d930bedac2d6cff6d94292a32534936e25db6b65df0ff251",
+  "generated_donor_sha256": "39eece51b7ce49087cfd1a90d86d1343e28bc84d64302f2c3cabbe912a579b9b",
+  "bounds": [
+    410,
+    110,
+    570,
+    172
+  ],
+  "donor_crop": [
+    0,
+    168,
+    1774,
+    621
+  ],
+  "changed_pixels": 3651,
+  "all_pixels_outside_bounds_identical": true,
+  "process": "Installed image generator produced isolated ochre/chalk pigment on black. Area-resampled pigment only onto bare upper rock; donor overwritten with final whole-wall PNG.",
+  "visual_review": {
+    "status": "Locally inspected complete PNG and decoded 512-square JPEG",
+    "ancestral_marks": "Preserved; every decoded pixel outside the small bare-rock patch is identical.",
+    "pepe": "Both inherited Pepe figures retain wide mouths and heavy-lidded eyes.",
+    "hands": "Hands concealed in both ancestral figures; no new hand, handprint, stencil or visible digit added.",
+    "forbidden_elements": "No letters, numbers, captions, signatures, logos, watermarks, borders, real people or prohibited symbols observed.",
+    "unmet_visual_requirements": [],
+    "limitations": [
+      "Fine pigment details soften in the preview.",
+      "Local inspection is not independent visual approval."
+    ]
+  },
+  "preview_location": "Explicit numbered-preview requirement places the only new JPEG in dist/line-1."
+}

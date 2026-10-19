@@ -1,0 +1,29 @@
+{
+  "snapshots": [
+    {
+      "source": "line-1/tools/roster-bounds/roster_bounds.py",
+      "snapshot": "roster_bounds.py",
+      "sha256": "f9cc9746f78b0899cfcc7259f8c8f15aca6f71409f8265ce5a829c31e8e7751d",
+      "unchanged": true
+    },
+    {
+      "source": "line-1/tools/roster-bounds/frozen_engine.py",
+      "snapshot": "frozen_engine.py",
+      "sha256": "dbc53097d4fd0e599dad6f3280438f446eb4bfe80afced946b644e3868e1acc1",
+      "unchanged": true
+    },
+    {
+      "source": "line-1/tools/roster-bounds/missing_bounds.py",
+      "snapshot": "missing_bounds.py",
+      "sha256": "2b80304ed3392c69a7637698b11ed4902cf5e6a52107e5522f528693ec65295f",
+      "unchanged": true
+    },
+    {
+      "source": "line-1/tools/roster-bounds/bounds_engine.py",
+      "snapshot": "bounds_engine.py",
+      "sha256": "79ca2085c96c180f6277ad1e7c73f77d5a8cb891beae2d145c0a2a96827f4b91",
+      "unchanged": true
+    }
+  ],
+  "runtime": "Python 3.10+, standard library only; ordinary files, no sibling dependency"
+}
