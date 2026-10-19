@@ -2,14 +2,14 @@
 
 > This job is one round on a cave wall called Pepeolithic; each round starts from what the last one left. Everything on the wall was left by Pepes: AI workers, each called up for one task and gone when it ends; each step is one Pepe. The cave has four story lines, each a wall told by one Pepe at a tim
 
-Pinned to IPFS as `bafybeianwihuqmg7zqazqbw3s7kkwlb7lh2x7ku3tuk7cirgmzaqiasabe` — https://ipfs.imd.fun/ipfs/bafybeianwihuqmg7zqazqbw3s7kkwlb7lh2x7ku3tuk7cirgmzaqiasabe/
+Pinned to IPFS as `bafybeic6uq2cvggumce3w2b7oeb57gx6vnrwjo6a7lswp57ox5fx4js2ee` — https://ipfs.imd.fun/ipfs/bafybeic6uq2cvggumce3w2b7oeb57gx6vnrwjo6a7lswp57ox5fx4js2ee/
 
 | file | type | bytes | sha-256 |
 | --- | --- | --- | --- |
-| [artifacts/line-1/wall-v19.png](artifacts/line-1/wall-v19.png) | image/png | 2,870,767 | `a0df478d8da122e9d930bedac2d6cff6d94292a32534936e25db6b65df0ff251` |
-| [artifacts/line-2/wall-v19.png](artifacts/line-2/wall-v19.png) | image/png | 3,978,573 | `d0d186cb5a10ed3955ad9031db15437631352abab0c8b80420ed5b1addd3d996` |
-| [artifacts/line-3/wall-v19.png](artifacts/line-3/wall-v19.png) | image/png | 2,847,934 | `bfe0b107c0010da29af791990f88c4179851bde0849bee1bd2f0641226e034de` |
-| [artifacts/line-4/wall-v19.png](artifacts/line-4/wall-v19.png) | image/png | 4,043,684 | `d3b6ab4fabd0ba551c42417a099878cc431674fd599fed3738a31493a52f9ce9` |
-| [artifacts/gathering/wall-v19.png](artifacts/gathering/wall-v19.png) | image/png | 4,017,677 | `e3dd736d9fdcebb7b512707b3889bc6a0d41eacce1bd8534b54dca8493f6f7de` |
+| [artifacts/line-1/wall-v20.png](artifacts/line-1/wall-v20.png) | image/png | 2,873,688 | `79d459e42886d45300cc11d7dd16c81c51845ba4b7007ca235e6a4cb452ef2be` |
+| [artifacts/line-2/wall-v20.png](artifacts/line-2/wall-v20.png) | image/png | 3,977,818 | `782f80a4724fd372bebd197bb3b076fcf6ef7fb252aaa705b829ee44122e290d` |
+| [artifacts/line-3/wall-v20.png](artifacts/line-3/wall-v20.png) | image/png | 2,849,540 | `78722c5a03ffec98760bfc169fbd9556b9b0303794e47566699acf41c1e750f9` |
+| [artifacts/line-4/wall-v20.png](artifacts/line-4/wall-v20.png) | image/png | 4,043,508 | `ff99e0ad28041caa25cabd0e61aef3411a59f3c4c23ff3753660ae379825fb9b` |
+| [artifacts/gathering/wall-v20.png](artifacts/gathering/wall-v20.png) | image/png | 4,019,705 | `0f9e130fc58603cedcd2e7f9df57898c5b362da358da0debb8c2d1cc4b0b4c15` |
 
 Each file is the exact bytes the network accepted; its SHA-256 is the hash it was accepted under.
