@@ -1,40 +1,43 @@
 {
   "structural_checks": "passed",
-  "tests_passed": 902,
-  "cli_examples": 103,
+  "tests_passed": 950,
+  "cli_examples": 110,
   "line_files_unchanged": true,
   "goals": 4,
-  "numbered_records": 168,
-  "painted_records": 86,
-  "future_records": 82,
-  "unchanged_engine_snapshots": 7,
+  "numbered_records": 172,
+  "painted_records": 91,
+  "future_records": 81,
+  "unchanged_engine_snapshots": 8,
   "wall": {
-    "path": "artifacts/gathering/wall-v19.png",
+    "path": "artifacts/gathering/wall-v20.png",
     "format": "PNG RGB8",
     "width": 1254,
     "height": 1254,
-    "bytes": 4017677,
-    "sha256": "e3dd736d9fdcebb7b512707b3889bc6a0d41eacce1bd8534b54dca8493f6f7de",
+    "bytes": 4019705,
+    "sha256": "0f9e130fc58603cedcd2e7f9df57898c5b362da358da0debb8c2d1cc4b0b4c15",
     "declared_output_tracked": false
   },
   "preview": {
-    "path": "dist/gathering/19.jpg",
+    "path": "dist/gathering/20.jpg",
     "format": "JPEG baseline",
     "width": 512,
     "height": 512,
-    "bytes": 99851
+    "bytes": 99949
   },
   "pixel_preservation": {
-    "changed_pixels": 2066,
+    "changed_pixels": 4170,
     "allowed_box": [
-      150,
-      300,
-      265,
-      370
+      340,
+      135,
+      465,
+      205
     ],
     "all_pixels_outside_added_motif_unchanged": true
   },
   "unmet_visual_requirements": [],
+  "known_behavioral_defects": [
+    "Uncertainty Lens falsely orders a point at an included interval start; see REPORT.md and source-review20.json."
+  ],
   "limitations": [
     "Local checks, not independent certification.",
     "Gallery structure checked without browser layout certification.",

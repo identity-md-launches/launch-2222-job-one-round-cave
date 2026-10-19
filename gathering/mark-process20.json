@@ -1,0 +1,26 @@
+{
+  "method": "Generated isolated pigment motif, transferred only nonblack mineral pigment to bare upper-left rock; no background regeneration.",
+  "image_tool": "mcp__image__generate_image_gpt_mini (gpt-image-1-mini)",
+  "prompt": "A red ochre cord ties two chalk pebbles together. Porous prehistoric pigments on black; no writing or hands.",
+  "ancestor": "artifacts/gathering/wall-v19.png",
+  "ancestor_sha256": "e3dd736d9fdcebb7b512707b3889bc6a0d41eacce1bd8534b54dca8493f6f7de",
+  "generated_donor_sha256": "b05fdd3a3e58ac7e3b45c1a6c124c785a5132643daa23abe90ea410ba975e320",
+  "donor_dimensions": [
+    1024,
+    1024
+  ],
+  "donor_crop": [
+    90,
+    290,
+    935,
+    730
+  ],
+  "destination_box": [
+    340,
+    135,
+    465,
+    205
+  ],
+  "changed_pixels": 4170,
+  "preservation": "All decoded pixels outside the small pigment transfer are identical to Gathering 19."
+}

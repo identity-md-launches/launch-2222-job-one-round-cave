@@ -48,8 +48,22 @@ def main():
             lens_cases.append({'case': name, 'accepted': True, 'observed': result})
         except ValueError as exc:
             lens_cases.append({'case': name, 'accepted': False, 'diagnostic': str(exc)})
+    point = {'id': 'point', 'start': 2, 'end': 2}
+    interval = {'id': 'interval', 'start': 2, 'end': 4}
+    start_boundary = []
+    for events in ([point, interval], [interval, point]):
+        observed = lens.analyze(events)
+        start_boundary.append({'input': events, 'observed': observed,
+            'expected': 'unresolved: point 2 belongs to half-open [2,4), so both events may occur at 2',
+            'false_definite_order': bool(observed['definite_orders'])})
+    precision_raw = ('[{"id":"a","start":0,"end":1.00000000000000003},'
+                     '{"id":"b","start":1.00000000000000002,"end":2}]')
+    precision = lens.analyze(lens.load_events(precision_raw))
     result = {'normalization': normalization, 'percent_parser': percent_check,
               'uncertainty_lens': lens_cases,
+              'decimal_precision_repair': {'input': precision_raw, 'observed': precision,
+                  'false_definite_order_fixed': not precision['definite_orders']},
+              'open_findings': {'point_at_included_interval_start': start_boundary},
               'line_files_changed': False,
               'limits': 'Constructed probes of current source, not observed attacks or real incident evidence; script reports gaps rather than treating acceptance as correctness.'}
     print(json.dumps(result, ensure_ascii=True, allow_nan=False, indent=2))

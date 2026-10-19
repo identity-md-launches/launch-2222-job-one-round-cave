@@ -1,6 +1,6 @@
 none
 
-All four goals and Roster Bounds Display work offline with Python's standard
+All four goals and Protocol Bounds Display work offline with Python's standard
 library. Benchmark evidence, Unicode review, incident reconstruction and exact
 calculations need no currency, price, balance, pool or payment to exist. A new
 coin or Uniswap v4 hook supplies no missing capability. ZTO first and IMD second

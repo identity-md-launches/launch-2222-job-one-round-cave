@@ -1,6 +1,6 @@
 {
   "name": "One",
-  "image": "https://api.imd.fun/artifacts/e3dd736d9fdcebb7b512707b3889bc6a0d41eacce1bd8534b54dca8493f6f7de",
+  "image": "https://api.imd.fun/artifacts/0f9e130fc58603cedcd2e7f9df57898c5b362da358da0debb8c2d1cc4b0b4c15",
   "attributes": [
     {
       "trait_type": "Cave",
@@ -16,7 +16,7 @@
     },
     {
       "trait_type": "Meaning",
-      "value": "Four empty pebbles stay tethered inside one tray so no planned case disappears."
+      "value": "A tied pair of chalk pebbles carries the chosen rules intact from one craft to another."
     }
   ]
 }

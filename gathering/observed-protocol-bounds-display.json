@@ -1,0 +1,390 @@
+{
+  "schema": "protocol-bounds-display/1",
+  "protocol_evidence": {
+    "schema": "bound-benchmark-check-v1",
+    "protocol_sha256": "2dc86560749b45cdc11d3962f0f4fb7550150c9d256405c59d095c3778e33365",
+    "protocol_bytes_sha256": "c8f60cf6045a54ac0d61f02f0ba6ae2cae3a1859061d5935a48fae34f283f43b",
+    "bound_settings": {
+      "practical_margin": "0.1",
+      "omission_policy": "reject"
+    },
+    "roster_report": {
+      "schema": "roster-bounds-v1",
+      "status": "pinned_roster_retained_with_explicit_unknowns",
+      "plan_sha256": "a9ac7f42e277e4ef9b1b1c5a9ac4af99bd824a6e639b63c463d87e640678a2dc",
+      "manifest_bytes_sha256": "60220476ccc93858832f628935658feac23503750a94531aabeadf892d4b97cb",
+      "observation_bytes_sha256": "c8e80ed4104f4f85c50a2df9d02c2dbb6ca47fc748ad545815adfe6475226d02",
+      "normalized_csv_sha256": "c8e80ed4104f4f85c50a2df9d02c2dbb6ca47fc748ad545815adfe6475226d02",
+      "baseline_version": "python-default-v1",
+      "pass_rule": "Pass iff the fixed policy accepts the case text exactly when expected_accept is true. Rejection includes parser ValueError or RecursionError. Curated acceptance checks, not a representative performance sample.",
+      "planned_case_order": [
+        "empty-object",
+        "nested-valid",
+        "unicode-string",
+        "finite-decimal",
+        "same-key-separate-objects",
+        "quoted-constant",
+        "nan-constant",
+        "infinity-constant",
+        "negative-infinity",
+        "nested-constant",
+        "duplicate-name",
+        "escaped-duplicate-name",
+        "nested-duplicate",
+        "overflowing-float",
+        "truncated-array",
+        "trailing-data",
+        "leading-zero",
+        "empty-input"
+      ],
+      "candidate_order": [
+        "reject-constants-v1",
+        "unique-finite-v1"
+      ],
+      "supplied_case_count": 18,
+      "restoration_authorized": false,
+      "restored_all_unknown_case_ids": [],
+      "restored_unknown_cell_count": 0,
+      "supplied_unknown_cell_count": 0,
+      "analysis": {
+        "schema_version": 1,
+        "input_sha256": "c8e80ed4104f4f85c50a2df9d02c2dbb6ca47fc748ad545815adfe6475226d02",
+        "planned_cases_retained": 18,
+        "candidate_count": 2,
+        "missing_cells": 0,
+        "familywise_alpha": {
+          "numerator": "1",
+          "denominator": "20"
+        },
+        "simultaneous_coverage_at_least": {
+          "numerator": "19",
+          "denominator": "20"
+        },
+        "practical_margin": {
+          "numerator": "1",
+          "denominator": "10"
+        },
+        "one_sided_tail_budget": {
+          "numerator": "1",
+          "denominator": "160"
+        },
+        "outward_grid_bits": 32,
+        "method": "Envelope of complete-data Paired Bounds over every binary completion; exact outward binomial bounds",
+        "candidates": [
+          {
+            "name": "reject-constants-v1",
+            "complete_pairs": 18,
+            "incomplete_pairs": 0,
+            "candidate_only_pass_count_range": [
+              4,
+              4
+            ],
+            "baseline_only_pass_count_range": [
+              0,
+              0
+            ],
+            "sample_difference_identification_bounds": [
+              {
+                "numerator": "2",
+                "denominator": "9"
+              },
+              {
+                "numerator": "2",
+                "denominator": "9"
+              }
+            ],
+            "candidate_minus_baseline_bounds": [
+              {
+                "numerator": "-436062209",
+                "denominator": "2147483648"
+              },
+              {
+                "numerator": "2319648301",
+                "denominator": "4294967296"
+              }
+            ],
+            "candidate_exceeds_positive_margin": false,
+            "baseline_exceeds_positive_margin": false,
+            "entire_interval_strictly_inside_equivalence_margin": false
+          },
+          {
+            "name": "unique-finite-v1",
+            "complete_pairs": 18,
+            "incomplete_pairs": 0,
+            "candidate_only_pass_count_range": [
+              8,
+              8
+            ],
+            "baseline_only_pass_count_range": [
+              0,
+              0
+            ],
+            "sample_difference_identification_bounds": [
+              {
+                "numerator": "4",
+                "denominator": "9"
+              },
+              {
+                "numerator": "4",
+                "denominator": "9"
+              }
+            ],
+            "candidate_minus_baseline_bounds": [
+              {
+                "numerator": "-321217823",
+                "denominator": "4294967296"
+              },
+              {
+                "numerator": "3201162157",
+                "denominator": "4294967296"
+              }
+            ],
+            "candidate_exceeds_positive_margin": false,
+            "baseline_exceeds_positive_margin": false,
+            "entire_interval_strictly_inside_equivalence_margin": false
+          }
+        ],
+        "assumptions": [
+          "Latent complete case vectors are independent identically distributed draws from the target population.",
+          "Retain the fixed planned case set and full candidate family, including wholly missing rows and columns.",
+          "Observed 0/1 outcomes are correct; ? means unknown, never an observed pass or fail.",
+          "No missing-at-random assumption is needed: every binary completion is enclosed, even outcome-dependent masking.",
+          "Fix final sample size, pass rule, family, alpha and margin before observing outcomes; no repeated looks or optional stopping.",
+          "Unlisted or selectively omitted cases, correlated cases, selected families and incorrect observed labels invalidate coverage.",
+          "Sample identification bounds describe possible completed sample means, not population confidence bounds.",
+          "Non-establishment of a criterion is inconclusive; pins establish byte identity, not honesty or prospective choices."
+        ]
+      },
+      "limits": [
+        "Unknowns are not measured outcomes. Restored rows are explicitly recorded, never scored as failures.",
+        "Retain the plan pin before observations; hashes prove byte identity, not timing, execution or honesty.",
+        "This legacy plan binds case IDs and labels, not case payloads or system code.",
+        "Margin is caller-supplied and NOT covered by the legacy plan pin; choose and retain it prospectively.",
+        "Use once at the fixed endpoint. Completing missing observations is not permission for optional stopping.",
+        "The enclosed analysis retains its iid latent-case, fixed-family and accurate-scoring assumptions."
+      ]
+    },
+    "limits": [
+      "The outer protocol pin additionally binds margin and omission policy; the nested legacy-plan caveat applies only to its own pin.",
+      "Retain this protocol pin independently before outcomes. Hashes do not establish timing, honest execution or scoring.",
+      "IDs do not bind case payloads or executable bytes. Preserve those separately, for example with Benchmark Seal.",
+      "Fixed sample size, iid latent case vectors, full family and accurate scoring remain assumptions. No optional stopping or selective publication.",
+      "Restoration preserves unknown outcomes and the denominator; it does not measure missing cases."
+    ]
+  },
+  "normalized_csv": "case,baseline,reject-constants-v1,unique-finite-v1\nempty-object,1,1,1\nnested-valid,1,1,1\nunicode-string,1,1,1\nfinite-decimal,1,1,1\nsame-key-separate-objects,1,1,1\nquoted-constant,1,1,1\nnan-constant,0,1,1\ninfinity-constant,0,1,1\nnegative-infinity,0,1,1\nnested-constant,0,1,1\nduplicate-name,0,0,1\nescaped-duplicate-name,0,0,1\nnested-duplicate,0,0,1\noverflowing-float,0,0,1\ntruncated-array,1,1,1\ntrailing-data,1,1,1\nleading-zero,1,1,1\nempty-input,1,1,1\n",
+  "reading_view": {
+    "schema": "missing-bounds-display/1",
+    "input_sha256": "c8e80ed4104f4f85c50a2df9d02c2dbb6ca47fc748ad545815adfe6475226d02",
+    "analysis": {
+      "schema_version": 1,
+      "input_sha256": "c8e80ed4104f4f85c50a2df9d02c2dbb6ca47fc748ad545815adfe6475226d02",
+      "planned_cases_retained": 18,
+      "candidate_count": 2,
+      "missing_cells": 0,
+      "familywise_alpha": {
+        "numerator": "1",
+        "denominator": "20"
+      },
+      "simultaneous_coverage_at_least": {
+        "numerator": "19",
+        "denominator": "20"
+      },
+      "practical_margin": {
+        "numerator": "1",
+        "denominator": "10"
+      },
+      "one_sided_tail_budget": {
+        "numerator": "1",
+        "denominator": "160"
+      },
+      "outward_grid_bits": 32,
+      "method": "Envelope of complete-data Paired Bounds over every binary completion; exact outward binomial bounds",
+      "candidates": [
+        {
+          "name": "reject-constants-v1",
+          "complete_pairs": 18,
+          "incomplete_pairs": 0,
+          "candidate_only_pass_count_range": [
+            4,
+            4
+          ],
+          "baseline_only_pass_count_range": [
+            0,
+            0
+          ],
+          "sample_difference_identification_bounds": [
+            {
+              "numerator": "2",
+              "denominator": "9"
+            },
+            {
+              "numerator": "2",
+              "denominator": "9"
+            }
+          ],
+          "candidate_minus_baseline_bounds": [
+            {
+              "numerator": "-436062209",
+              "denominator": "2147483648"
+            },
+            {
+              "numerator": "2319648301",
+              "denominator": "4294967296"
+            }
+          ],
+          "candidate_exceeds_positive_margin": false,
+          "baseline_exceeds_positive_margin": false,
+          "entire_interval_strictly_inside_equivalence_margin": false
+        },
+        {
+          "name": "unique-finite-v1",
+          "complete_pairs": 18,
+          "incomplete_pairs": 0,
+          "candidate_only_pass_count_range": [
+            8,
+            8
+          ],
+          "baseline_only_pass_count_range": [
+            0,
+            0
+          ],
+          "sample_difference_identification_bounds": [
+            {
+              "numerator": "4",
+              "denominator": "9"
+            },
+            {
+              "numerator": "4",
+              "denominator": "9"
+            }
+          ],
+          "candidate_minus_baseline_bounds": [
+            {
+              "numerator": "-321217823",
+              "denominator": "4294967296"
+            },
+            {
+              "numerator": "3201162157",
+              "denominator": "4294967296"
+            }
+          ],
+          "candidate_exceeds_positive_margin": false,
+          "baseline_exceeds_positive_margin": false,
+          "entire_interval_strictly_inside_equivalence_margin": false
+        }
+      ],
+      "assumptions": [
+        "Latent complete case vectors are independent identically distributed draws from the target population.",
+        "Retain the fixed planned case set and full candidate family, including wholly missing rows and columns.",
+        "Observed 0/1 outcomes are correct; ? means unknown, never an observed pass or fail.",
+        "No missing-at-random assumption is needed: every binary completion is enclosed, even outcome-dependent masking.",
+        "Fix final sample size, pass rule, family, alpha and margin before observing outcomes; no repeated looks or optional stopping.",
+        "Unlisted or selectively omitted cases, correlated cases, selected families and incorrect observed labels invalidate coverage.",
+        "Sample identification bounds describe possible completed sample means, not population confidence bounds.",
+        "Non-establishment of a criterion is inconclusive; pins establish byte identity, not honesty or prospective choices."
+      ]
+    },
+    "display": {
+      "unit": "percentage points",
+      "places": 2,
+      "lower_mode": "floor",
+      "upper_mode": "ceiling",
+      "margin_percentage_points": "10",
+      "rounding_error_means": "display minus exact, in percentage points"
+    },
+    "candidates": [
+      {
+        "candidate": "reject-constants-v1",
+        "complete_pairs": 18,
+        "incomplete_pairs": 0,
+        "sample_identification_percentage_points": {
+          "lower": "22.22",
+          "upper": "22.23",
+          "lower_rounding_error": "-1/450",
+          "upper_rounding_error": "7/900"
+        },
+        "population_confidence_percentage_points": {
+          "lower": "-20.31",
+          "upper": "54.01",
+          "lower_rounding_error": "-0.00427104108035564422607421875",
+          "upper_rounding_error": "0.001479302756488323211669921875"
+        },
+        "exact_criteria": {
+          "candidate_exceeds_positive_margin": false,
+          "baseline_exceeds_positive_margin": false,
+          "entire_interval_strictly_inside_equivalence_margin": false
+        },
+        "displayed_interval_criteria": {
+          "candidate_exceeds_positive_margin": false,
+          "baseline_exceeds_positive_margin": false,
+          "entire_interval_strictly_inside_equivalence_margin": false
+        },
+        "criteria_lost_to_display_precision": []
+      },
+      {
+        "candidate": "unique-finite-v1",
+        "complete_pairs": 18,
+        "incomplete_pairs": 0,
+        "sample_identification_percentage_points": {
+          "lower": "44.44",
+          "upper": "44.45",
+          "lower_rounding_error": "-1/225",
+          "upper_rounding_error": "1/180"
+        },
+        "population_confidence_percentage_points": {
+          "lower": "-7.48",
+          "upper": "74.54",
+          "lower_rounding_error": "-0.001064751781523227691650390625",
+          "upper_rounding_error": "0.007135454528033733367919921875"
+        },
+        "exact_criteria": {
+          "candidate_exceeds_positive_margin": false,
+          "baseline_exceeds_positive_margin": false,
+          "entire_interval_strictly_inside_equivalence_margin": false
+        },
+        "displayed_interval_criteria": {
+          "candidate_exceeds_positive_margin": false,
+          "baseline_exceeds_positive_margin": false,
+          "entire_interval_strictly_inside_equivalence_margin": false
+        },
+        "criteria_lost_to_display_precision": []
+      }
+    ],
+    "limits": [
+      "Original rational intervals and decisions are retained unchanged; displayed intervals are enlarged outward.",
+      "Coverage requires latent complete case vectors to be independent identically distributed draws, with fixed planned rows and full candidate family.",
+      "Every planned row is retained; ? is unknown, never imputed as pass or failure. Unlisted cases cannot be detected.",
+      "Sample identification intervals describe possible completed sample means, not population confidence bounds.",
+      "No missing-at-random assumption is needed; every binary completion is enclosed. This does not repair selective omission, optional stopping or inaccurate observations.",
+      "Coverage is repeated-sampling, not a posterior probability; rounding adds no measurement evidence.",
+      "The practical margin is an absolute rate difference: 0.1 means ten percentage points, not a relative percent improvement.",
+      "Displayed comparisons use the exact unrounded margin and may be inconclusive when the original criterion passes.",
+      "A false criterion does not establish its opposite; do not choose precision, margin or family after inspecting outcomes.",
+      "Input pins prove byte identity, not honest execution, representative sampling or prospective choices."
+    ]
+  },
+  "limits": [
+    "Retain the protocol pin independently before observations; a hash does not prove when choices were made.",
+    "Alpha, family, roster, margin and omission policy come from the verified protocol. Display precision is not pinned.",
+    "Lower endpoints round down and upper endpoints round up; precision cannot create an exact criterion.",
+    "The nested legacy-plan margin caveat concerns its inner pin; the outer protocol additionally binds margin and omission policy.",
+    "Original observation, protocol-byte and normalized-CSV identities are separate. Unknowns are never invented observations.",
+    "Fixed sample size, iid latent case vectors, full prospective family and accurate scoring remain assumptions.",
+    "No optional stopping, selective reporting, measurement validation, execution attestation or deployment recommendation.",
+    "Case IDs do not bind payloads or executable bytes; retain those separately, for example with Benchmark Seal."
+  ],
+  "data_kind": "measured_local_execution_on_curated_cases",
+  "execution": {
+    "seal_sha256": "01612f2a419f56056dc09d402b78b06548ad5907bba1c14347b316156ecc5f00",
+    "receipt_sha256": "ac336a28611af7ca51a11764a9f161865c6b8a1199043e13d2b56f6fc946cc43",
+    "recheck": "replayed_and_reexecuted",
+    "case_source": "line-1/tools/policy-benchmark/cases.json",
+    "choices_frozen_before_local_execution": true,
+    "choices": {
+      "margin": "0.1",
+      "omission_policy": "reject"
+    },
+    "limitations": "Local ordering of steps is not independent preregistration or execution attestation. Hand-selected related cases are not iid population samples; confidence bounds here illustrate arithmetic only."
+  }
+}

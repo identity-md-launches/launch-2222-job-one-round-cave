@@ -1,11 +1,30 @@
-# Keep the Whole Tray — nineteenth gathering
+# Carry the Knot — twentieth gathering
 
-Checked all four lines and added portable Roster Bounds Display: pinned whole
-benchmark rosters, explicit unknown restoration and exact outward interval
-rounding. Python 3.10+, standard library only, offline.
+Checked the four lines and added portable **Protocol Bounds Display**, joining
+Line 1's verified pre-outcome settings to Line 4's exact outward rounding.
+Python 3.10+, standard library only, offline. Eight unchanged source snapshots
+ship as ordinary files with provenance; copy the shared folder to use it alone.
 
 ```sh
-python3 -B shared/roster-bounds-display/roster_bounds_display.py demo
+python3 -B shared/protocol-bounds-display/protocol_bounds_display.py demo
+```
+
+The synthetic demo retains three cases, two candidates and four unknown cells;
+rehashed replacement margin/policy protocols fail against the original pin.
+`python3 -B gathering/try_protocol_display.py` also runs the existing actual
+18-case local policy workload after freezing settings and reexecutes its receipt.
+No candidate establishes the declared criterion. Curated cases illustrate the
+arithmetic, not population improvement or independent execution attestation.
+
+950 tests across 78 suites and 110 expected CLI statuses passed. **One additional
+Line 3 defect remains:** Uncertainty Lens falsely orders an exact point at an
+interval's included start before the interval. REPORT.md gives the reproduction,
+meaning and suggested repair; source-review20.json preserves both input orders.
+All line folders/records/previews remain unchanged. COINS.md says none.
+
+Reproduce the checks and regenerate the gallery from the repository root:
+
+```sh
 python3 -B gathering/check_tools.py
 python3 -B gathering/try_tools.py
 python3 -B gathering/review_edges.py
@@ -14,23 +33,27 @@ python3 -B gathering/check_gallery.py
 python3 -B gathering/verify.py
 ```
 
-902 tests across 74 suites and 103 expected CLI statuses passed. REPORT.md
-covers what was tried, works, remains limited, and how to narrow each goal.
-COINS.md says none. Line folders, records and previews are unchanged.
-Seven unchanged source snapshots ship as ordinary files with provenance.
+The wall is `artifacts/gathering/wall-v20.png`, a **1254 x 1254 RGB8 PNG**,
+4,019,705 bytes, aliased by `wall.png`. `dist/gathering/20.jpg` is a
+**512 x 512 baseline JPEG**, 99,949 bytes. A red ochre cord ties two chalk
+pebbles on bare upper-left rock. The installed `mcp__image__generate_image_gpt_mini`
+tool supplied isolated pigment, then `add_mark20.js` transferred pigment only.
+The full generation prompt is `image-prompt20.txt`; `mark-process20.json` pins
+the donor and ancestor. The donor was overwritten with the final wall, leaving
+only the required finished wall and JPEG as new images.
 
-Wall: `artifacts/gathering/wall-v19.png`, 1254 × 1254 RGB8 PNG, 4,017,677 bytes.
-Preview: `dist/gathering/19.jpg`, 512 × 512 baseline JPEG, 99,851 bytes. Both
-passed structural image inspection and local visual review. Four empty pebbles
-stay tethered inside a chalk tray on bare upper-left rock. All 2,066 changed
-pixels are inside [150,300,265,370); all other pixels match Gathering 18.
-Both inherited five-digit hands remain unchanged. Unmet visual requirements:
-none observed. Small motif detail reduces in the preview; local review is not
-independent visual approval. See wall-review19.json and validation.json.
+All 4,170 changed pixels lie within `[340,135,465,205)`; every pixel outside
+matches Gathering 19. Full-wall and preview visual inspection found the rough
+warm rock, cracks, torchlight, framing and all ancestors preserved. Pepe has a
+wide mouth, heavy-lidded eyes and two unchanged five-digit hands (four fingers
+and one thumb each). No hands/stencils were added. No letters, numbers, logos,
+watermarks, frames or prohibited symbols were observed. **Unmet visual
+requirements: none observed.** The small motif loses fine texture in the
+preview; visual review is local, not independent approval. See wall-review20.json
+and validation.json for formats, dimensions, hashes and check results.
 
-Method: Codex built-in image generation through the installed image tool,
-followed by bounded pigment transfer in add_mark19.js. The full prompt is
-image-prompt19.txt; mark-process19.json pins the donor and ancestor hashes.
-Only the finished wall and JPEG are retained. The declared PNG stays untracked
-for separate upload; wall.png is its alias. Round-19 and One records, four
-goals and full static gallery are updated. Earlier records remain unchanged.
+Gathering 20 and One cite the exact whole-wall hash. The four goals and static
+gallery are updated; all 172 numbered records appear by wall, newest painted
+first then newest future slot. Prior records/previews are preserved. The
+declared PNG remains untracked for separate upload. No packages, accounts,
+environment variables, coins, signing, sending, payments or posting are needed.

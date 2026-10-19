@@ -2,6 +2,128 @@
  "checks_passed": true,
  "examples": [
   {
+   "name": "protocol-bound outward display",
+   "command": [
+    "python3",
+    "-B",
+    "shared/protocol-bounds-display/protocol_bounds_display.py",
+    "demo"
+   ],
+   "expected_exit": 0,
+   "exit_code": 0,
+   "passed": true,
+   "observed": {
+    "normalized_csv": "case,baseline,synthetic-a-v1,synthetic-b-v1\nempty,1,1,1\nunicode,?,?,?\ntruncated,0,1,?\n"
+   }
+  },
+  {
+   "name": "measured protocol-bound display",
+   "command": [
+    "python3",
+    "-B",
+    "gathering/try_protocol_display.py"
+   ],
+   "expected_exit": 0,
+   "exit_code": 0,
+   "passed": true,
+   "observed": {
+    "normalized_csv": "case,baseline,reject-constants-v1,unique-finite-v1\nempty-object,1,1,1\nnested-valid,1,1,1\nunicode-string,1,1,1\nfinite-decimal,1,1,1\nsame-key-separate-objects,1,1,1\nquoted-constant,1,1,1\nnan-constant,0,1,1\ninfinity-constant,0,1,1\nnegative-infinity,0,1,1\nnested-constant,0,1,1\nduplicate-name,0,0,1\nescaped-duplicate-name,0,0,1\nnested-duplicate,0,0,1\noverflowing-float,0,0,1\ntruncated-array,1,1,1\ntrailing-data,1,1,1\nleading-zero,1,1,1\nempty-input,1,1,1\n"
+   }
+  },
+  {
+   "name": "pinned benchmark analysis settings",
+   "command": [
+    "python3",
+    "-B",
+    "line-1/tools/bound-protocol/bound_protocol.py",
+    "demo"
+   ],
+   "expected_exit": 0,
+   "exit_code": 0,
+   "passed": true,
+   "observed": {
+    "rejected": {
+     "changed_margin": "protocol digest mismatch; use the independently retained pre-outcome pin",
+     "changed_policy": "protocol digest mismatch; use the independently retained pre-outcome pin"
+    },
+    "normalized_csv": "case,baseline,synthetic-a-v1,synthetic-b-v1\nempty,1,1,1\nunicode,?,?,?\ntruncated,0,1,?\n"
+   }
+  },
+  {
+   "name": "Python escaped Unicode",
+   "command": [
+    "python3",
+    "-B",
+    "line-2/tools/python-unicode/python_unicode.py",
+    "--demo"
+   ],
+   "expected_exit": 0,
+   "exit_code": 0,
+   "passed": true,
+   "observed": {
+    "analysis_complete": true
+   }
+  },
+  {
+   "name": "Python escape review of actual source",
+   "command": [
+    "python3",
+    "-B",
+    "line-2/tools/python-unicode/python_unicode.py",
+    "--file",
+    "line-2/tools/python-unicode/python_unicode.py",
+    "--max-details",
+    "3"
+   ],
+   "expected_exit": 1,
+   "exit_code": 1,
+   "passed": true,
+   "observed": {
+    "analysis_complete": true
+   }
+  },
+  {
+   "name": "exact decimal timestamp overlap",
+   "command": [
+    "python3",
+    "-B",
+    "line-3/tools/uncertainty-lens/uncertainty_lens.py"
+   ],
+   "expected_exit": 0,
+   "exit_code": 0,
+   "passed": true,
+   "stdin": [
+    {
+     "id": "a",
+     "start": 0,
+     "end": 1.0
+    },
+    {
+     "id": "b",
+     "start": 1.0,
+     "end": 2
+    }
+   ],
+   "stdin_utf8": "[{\"id\":\"a\",\"start\":0,\"end\":1.00000000000000003},{\"id\":\"b\",\"start\":1.00000000000000002,\"end\":2}]",
+   "stdin_sha256": "33dc71e6398fa3402030a0ef785d2b66559a91caf27b07f1e28753056d86293d",
+   "observed": {}
+  },
+  {
+   "name": "exact dimensional balances",
+   "command": [
+    "python3",
+    "-B",
+    "line-4/tools/balance-flint/balance_flint.py",
+    "demo"
+   ],
+   "expected_exit": 0,
+   "exit_code": 0,
+   "passed": true,
+   "observed": {
+    "passes": true
+   }
+  },
+  {
    "name": "pinned roster outward display",
    "command": [
     "python3",
@@ -90,6 +212,8 @@
      "end": 3
     }
    ],
+   "stdin_utf8": "[{\"id\":\"a\",\"start\":3,\"end\":3},{\"id\":\"b\",\"start\":3,\"end\":3}]",
+   "stdin_sha256": "500709f95ab5ef882808955efb045831839521b36d945bd13a7754f99de4a95c",
    "observed": {}
   },
   {
@@ -863,6 +987,8 @@
      "end": 5
     }
    ],
+   "stdin_utf8": "[{\"id\":\"ingest\",\"start\":1,\"end\":3},{\"id\":\"alert\",\"start\":3,\"end\":4},{\"id\":\"retry\",\"start\":2,\"end\":5}]",
+   "stdin_sha256": "6b9fe9a9936597450003114726915d22369cc18442bb606883747ab5f78693bd",
    "observed": {}
   },
   {
@@ -1440,6 +1566,8 @@
      }
     ]
    },
+   "stdin_utf8": "{\"schema\": \"worksheet-flint/1\", \"steps\": [{\"name\": \"distance\", \"expression\": \"10 km\"}, {\"name\": \"duration\", \"expression\": \"2 h\"}, {\"name\": \"speed\", \"expression\": \"$distance / $duration\", \"to\": \"m/s\", \"expect\": \"5 km/h\", \"at_least\": \"1 m/s\", \"at_most\": \"2 m/s\"}]}",
+   "stdin_sha256": "372945e20a1df487c3c99e30d3f7efb3309d1802ec30f230448037909c39e11d",
    "observed": {
     "passes": true
    }

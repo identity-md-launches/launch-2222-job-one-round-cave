@@ -8,6 +8,13 @@ import sys
 
 ROOT = Path(__file__).resolve().parent.parent
 CASES = [
+ ('protocol-bound outward display', ['shared/protocol-bounds-display/protocol_bounds_display.py','demo'],0),
+ ('measured protocol-bound display', ['gathering/try_protocol_display.py'],0),
+ ('pinned benchmark analysis settings', ['line-1/tools/bound-protocol/bound_protocol.py','demo'],0),
+ ('Python escaped Unicode', ['line-2/tools/python-unicode/python_unicode.py','--demo'],0),
+ ('Python escape review of actual source', ['line-2/tools/python-unicode/python_unicode.py','--file','line-2/tools/python-unicode/python_unicode.py','--max-details','3'],1),
+ ('exact decimal timestamp overlap', ['line-3/tools/uncertainty-lens/uncertainty_lens.py'],0,'[{"id":"a","start":0,"end":1.00000000000000003},{"id":"b","start":1.00000000000000002,"end":2}]'),
+ ('exact dimensional balances', ['line-4/tools/balance-flint/balance_flint.py','demo'],0),
  ('pinned roster outward display', ['shared/roster-bounds-display/roster_bounds_display.py','demo'],0),
  ('pinned whole benchmark roster', ['line-1/tools/roster-bounds/roster_bounds.py','demo'],0),
  ('CSS escaped Unicode', ['line-2/tools/css-unicode/css_unicode.py','--demo'],0),
@@ -126,6 +133,8 @@ def main():
                'passed': run.returncode == expected}
         if stdin is not None:
             row['stdin'] = json.loads(stdin)
+            row['stdin_utf8'] = stdin
+            row['stdin_sha256'] = hashlib.sha256(stdin.encode('utf-8')).hexdigest()
         if run.stdout:
             try:
                 value = json.loads(run.stdout)

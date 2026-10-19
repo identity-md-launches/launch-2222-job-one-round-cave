@@ -1,0 +1,31 @@
+{
+  "name": "Carry the Knot",
+  "wall_path": "artifacts/gathering/wall-v20.png",
+  "wall_sha256": "0f9e130fc58603cedcd2e7f9df57898c5b362da358da0debb8c2d1cc4b0b4c15",
+  "wall_format": "PNG RGB8 noninterlaced",
+  "wall_dimensions": [
+    1254,
+    1254
+  ],
+  "wall_bytes": 4019705,
+  "preview_path": "dist/gathering/20.jpg",
+  "preview_format": "JPEG baseline",
+  "preview_dimensions": [
+    512,
+    512
+  ],
+  "visual_review": "Full finished wall visually inspected; preview reviewed separately. Local observation, not independent approval.",
+  "preserved": "Size, rough warm rock, cracks, roots, torchlight, framing and all ancestral marks. All decoded pixels outside [340,135,465,205) are identical to Gathering 19. Only new pigment was transferred within the patch.",
+  "added": "Two chalk pebbles tied with a short red ochre cord on previously bare upper-left rock.",
+  "hands": "Both ancestral hands show five digits: four fingers and one thumb each. No hands or stencils added.",
+  "prohibited_elements_observed": [],
+  "unmet_visual_requirements": [],
+  "limitations": [
+    "Small motif loses fine pigment detail in the 512px preview.",
+    "Local visual review cannot certify every inherited fine detail."
+  ],
+  "image_tool": "mcp__image__generate_image_gpt_mini, gpt-image-1-mini",
+  "prompt_file": "gathering/image-prompt20.txt",
+  "process_file": "gathering/mark-process20.json",
+  "preview_bytes": 99949
+}

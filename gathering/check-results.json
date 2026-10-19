@@ -7,6 +7,11 @@
       "exit_code": 0
     },
     {
+      "suite": "line-1/tools/bound-protocol",
+      "tests": 10,
+      "exit_code": 0
+    },
+    {
       "suite": "line-1/tools/candidate-ladder",
       "tests": 6,
       "exit_code": 0
@@ -117,6 +122,11 @@
       "exit_code": 0
     },
     {
+      "suite": "line-2/tools/python-unicode",
+      "tests": 15,
+      "exit_code": 0
+    },
+    {
       "suite": "line-2/tools/unicode-crosscheck",
       "tests": 18,
       "exit_code": 0
@@ -218,6 +228,11 @@
     },
     {
       "suite": "line-3/tools/uncertainty-lens",
+      "tests": 15,
+      "exit_code": 0
+    },
+    {
+      "suite": "line-4/tools/balance-flint",
       "tests": 10,
       "exit_code": 0
     },
@@ -347,6 +362,11 @@
       "exit_code": 0
     },
     {
+      "suite": "shared/protocol-bounds-display",
+      "tests": 8,
+      "exit_code": 0
+    },
+    {
       "suite": "shared/replay-review",
       "tests": 25,
       "exit_code": 0
@@ -357,6 +377,11 @@
       "exit_code": 0
     },
     {
+      "suite": "shared/roster-bounds-display",
+      "tests": 7,
+      "exit_code": 0
+    },
+    {
       "suite": "shared/timeline-text-delta",
       "tests": 5,
       "exit_code": 0
@@ -364,11 +389,6 @@
     {
       "suite": "shared/window-review",
       "tests": 12,
-      "exit_code": 0
-    },
-    {
-      "suite": "shared/roster-bounds-display",
-      "tests": 7,
       "exit_code": 0
     }
   ],
@@ -582,8 +602,8 @@
       "unicode_version": "15.0.0"
     }
   ],
-  "test_count": 902,
+  "test_count": 950,
   "line_files_unchanged": true,
-  "line_file_count": 486,
+  "line_file_count": 521,
   "line_3_fixture_note": "Unmodified source and suite copied to test/scratch/time-flint before discovery."
 }
