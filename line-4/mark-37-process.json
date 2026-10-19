@@ -1,0 +1,45 @@
+{
+  "method": "Two generated loops placed diagonally on bare rock; white donor paper excluded; multiply-blended earth pigment only.",
+  "ancestor": "artifacts/line-4/wall-v19.png",
+  "ancestor_sha256": "d3b6ab4fabd0ba551c42417a099878cc431674fd599fed3738a31493a52f9ce9",
+  "donor_sha256": "c9433a4a3f64455561719a0d73aca197ea87661b577a89c76ccac2f24887f3ee",
+  "transfers": [
+    {
+      "source": [
+        310,
+        18,
+        920,
+        632
+      ],
+      "destination": [
+        542,
+        213,
+        587,
+        259
+      ]
+    },
+    {
+      "source": [
+        310,
+        620,
+        950,
+        1210
+      ],
+      "destination": [
+        584,
+        267,
+        624,
+        306
+      ]
+    }
+  ],
+  "changed_pixels": 1100,
+  "changed_bbox_xyxy_inclusive": [
+    544,
+    214,
+    622,
+    305
+  ],
+  "final_sha256": "ff99e0ad28041caa25cabd0e61aef3411a59f3c4c23ff3753660ae379825fb9b",
+  "preservation": "All decoded pixels outside the selected pigment match the ancestor."
+}

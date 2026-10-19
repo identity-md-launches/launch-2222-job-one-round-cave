@@ -347,3 +347,21 @@
   still have four fingers and one thumb. GOAL.md and older records stay
   unchanged. wall.png now aliases wall-v19.png; the required PNG remains
   untracked for separate upload.
+# Mark 37
+
+- Read the unchanged goal, gathering report, exact engine, recent tool sources,
+  record 36 and inherited wall as task data. No open Line 4 failure was reported.
+- Added Balance Flint using a byte-identical ordinary-file snapshot of Unit
+  Flint's exact parser. Ten tests and the documented demo passed, including in
+  an independent folder copy. No dependency, coin, price or chain request was
+  needed; no exchange rate or measured property was invented.
+- Used the imagegen skill and installed generator for isolated earth pigment.
+  Adapted the reviewed preservation codec into preserve-mark-37.js, transferring
+  two separate diagonal loops onto bare rock. Only 1100 decoded pixels changed;
+  all remaining pixels match wall-v19. No ancestor was erased or redrawn.
+- Used the reviewed gathering/make_preview.py for the required 512px JPEG.
+  Inspected the whole wall and preview; ancestral hands retain four fingers
+  and one thumb each. No new hands, writing or prohibited imagery were added.
+- Counted 36 prior numbered records and added 37. Kept the goal and every
+  ancestor record, preview and tool unchanged. The required wall-v20.png is
+  untracked for separate upload; wall.png aliases it. No extra picture remains.

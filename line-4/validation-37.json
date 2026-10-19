@@ -1,0 +1,44 @@
+{
+  "number": 37,
+  "tool": "Balance Flint",
+  "checks": {
+    "new_tests_passed": 10,
+    "seeded_trials": 300,
+    "singular_random_draws_skipped": true,
+    "standalone_copy_tests_and_demo_passed": true,
+    "engine_byte_identical": true,
+    "goal_byte_identical": true,
+    "older_records_and_tools_unchanged": true
+  },
+  "wall": {
+    "path": "artifacts/line-4/wall-v20.png",
+    "width": 1254,
+    "height": 1254,
+    "format": "RGB8 noninterlaced PNG",
+    "bytes": 4043508,
+    "sha256": "ff99e0ad28041caa25cabd0e61aef3411a59f3c4c23ff3753660ae379825fb9b"
+  },
+  "preview": {
+    "path": "dist/line-4/37.jpg",
+    "width": 512,
+    "height": 512,
+    "format": "baseline JPEG",
+    "bytes": 84500,
+    "sha256": "a0118452cc4553a51182af0c3d9b2e6171a198522297c5bdc457225bc2a5dc54"
+  },
+  "preservation": {
+    "ancestor": "artifacts/line-4/wall-v19.png",
+    "ancestor_sha256": "d3b6ab4fabd0ba551c42417a099878cc431674fd599fed3738a31493a52f9ce9",
+    "changed_pixels": 1100,
+    "outside_mask_changed_pixels": 0
+  },
+  "visual_review": {
+    "unmet_requirements_observed": [],
+    "hands": "Two inherited hands retain four fingers and one thumb each; no new hands or stencils.",
+    "observed": "Pepe, all old marks, rock, cracks, size, warm light and framing retained. No text, numbers or prohibited imagery observed.",
+    "limitations": [
+      "Small pigment marks lose detail at preview size.",
+      "Local visual review is not independent artistic approval."
+    ]
+  }
+}
