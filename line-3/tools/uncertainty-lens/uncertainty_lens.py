@@ -5,16 +5,21 @@ import argparse
 import json
 import math
 import sys
+from decimal import Decimal, InvalidOperation
 from pathlib import Path
 
 
 MAX_INPUT_BYTES = 256 * 1024
 MAX_EVENTS = 128
 MAX_PAIRS = MAX_EVENTS * (MAX_EVENTS - 1) // 2
+MAX_NUMBER_CHARS = 256
+MAX_DECIMAL_EXPONENT = 10000
 
 
 def _endpoint(value):
     # bool is a subclass of int, and NaN silently defeats every ordering test.
+    if isinstance(value, Decimal):
+        return value.is_finite()
     if isinstance(value, bool) or not isinstance(value, (int, float)):
         return False
     return not isinstance(value, float) or math.isfinite(value)
@@ -73,12 +78,32 @@ def _reject_constant(value):
     raise ValueError(f"nonfinite JSON number: {value}")
 
 
+def _exact_number(token):
+    # Constructing Decimal from text and comparing it perform no context-rounded
+    # arithmetic. Limit lexical size/exponent before admitting untrusted input.
+    if len(token) > MAX_NUMBER_CHARS:
+        raise ValueError(f"JSON number exceeds {MAX_NUMBER_CHARS} characters")
+    try:
+        value = Decimal(token)
+    except InvalidOperation as exc:
+        raise ValueError("invalid decimal JSON number") from exc
+    if not value.is_finite() or abs(value.as_tuple().exponent) > MAX_DECIMAL_EXPONENT:
+        raise ValueError(f"JSON number exponent must be within +/-{MAX_DECIMAL_EXPONENT}")
+    return value
+
+
+def load_events(text):
+    """Parse numeric JSON lexemes exactly, without binary float conversion."""
+    return json.loads(text, parse_int=_exact_number, parse_float=_exact_number,
+                      parse_constant=_reject_constant)
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("path", nargs="?", help="JSON array file or - for stdin")
     args = ap.parse_args()
     try:
-        events = json.loads(_read_bounded(args.path), parse_constant=_reject_constant)
+        events = load_events(_read_bounded(args.path))
         result = analyze(events)
     except (OSError, UnicodeError, json.JSONDecodeError, ValueError) as exc:
         raise SystemExit(f"error: {exc}")

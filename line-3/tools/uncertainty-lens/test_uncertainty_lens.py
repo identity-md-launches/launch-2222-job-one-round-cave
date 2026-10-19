@@ -3,15 +3,80 @@ import subprocess
 import sys
 import tempfile
 import unittest
+import random
+from decimal import Decimal, localcontext
+from fractions import Fraction
 from pathlib import Path
 
-from uncertainty_lens import MAX_EVENTS, MAX_INPUT_BYTES, analyze
+from uncertainty_lens import MAX_EVENTS, MAX_INPUT_BYTES, analyze, load_events
 
 
 SCRIPT = Path(__file__).with_name("uncertainty_lens.py")
 
 
 class LensTests(unittest.TestCase):
+    def test_decimal_rounding_cannot_invent_order(self):
+        payload = ('[{"id":"a","start":0,"end":1.00000000000000003},'
+                   '{"id":"b","start":1.00000000000000002,"end":2}]')
+        # Reproduce the old failure independently using binary JSON floats.
+        self.assertEqual(len(analyze(json.loads(payload))["definite_orders"]), 1)
+        out = analyze(load_events(payload))
+        self.assertEqual(out["definite_orders"], [])
+        self.assertEqual(out["uncertain_pairs"][0]["reason"], "intervals overlap")
+        proc = subprocess.run([sys.executable, "-B", str(SCRIPT), "-"],
+                              input=payload.encode(), capture_output=True)
+        self.assertEqual(proc.returncode, 0, proc.stderr)
+        self.assertEqual(json.loads(proc.stdout), out)
+
+    def test_tiny_large_and_equivalent_points(self):
+        for left, right in (("1e-4000", "2e-4000"), ("1e4000", "2e4000"),
+                            ("9007199254740992.0", "9007199254740993.0")):
+            payload = ('[{"id":"a","start":%s,"end":%s},'
+                       '{"id":"b","start":%s,"end":%s}]') % (left, left, right, right)
+            self.assertEqual(analyze(load_events(payload))["definite_orders"],
+                             [{"before": "a", "after": "b"}])
+        out = analyze(load_events('[{"id":"a","start":1.00,"end":1e0},'
+                                  '{"id":"b","start":1,"end":1.000}]'))
+        self.assertEqual(out["definite_orders"], [])
+        self.assertEqual(out["uncertain_pairs"][0]["reason"], "coincident timestamp points")
+
+    def test_decimal_comparisons_ignore_context_precision(self):
+        with localcontext() as context:
+            context.prec = 2
+            values = load_events('[{"id":"a","start":0,"end":1.00000000003},'
+                                 '{"id":"b","start":1.00000000002,"end":2}]')
+            self.assertEqual(analyze(values)["definite_orders"], [])
+        for value in (Decimal("NaN"), Decimal("sNaN"), Decimal("Infinity")):
+            with self.assertRaises(ValueError):
+                analyze([{"id": "a", "start": value, "end": 2}])
+
+    def test_numeric_resource_limits(self):
+        for number in ("1e10001", "1e-10001", "1" * 257, "0." + "1" * 255):
+            with self.assertRaises(ValueError):
+                load_events('[{"id":"a","start":0,"end":' + number + '}]')
+        for number in ("1e10000", "1e-10000", "1" * 256):
+            self.assertEqual(len(load_events('[{"id":"a","start":0,"end":' + number + '}]')), 1)
+
+    def test_seeded_decimal_pairs_against_fraction_oracle(self):
+        rng = random.Random(37)
+        for _ in range(500):
+            tokens = [str(rng.randrange(-1000, 1000)) + "e-" + str(rng.randrange(10, 30))
+                      for _ in range(4)]
+            a, b = sorted(tokens[:2], key=Fraction)
+            c, d = sorted(tokens[2:], key=Fraction)
+            payload = ('[{"id":"a","start":%s,"end":%s},'
+                       '{"id":"b","start":%s,"end":%s}]') % (a, b, c, d)
+            out = analyze(load_events(payload))
+            av, bv, cv, dv = map(Fraction, (a, b, c, d))
+            expected = []
+            if not av == bv == cv == dv:
+                if bv <= cv:
+                    expected = [{"before": "a", "after": "b"}]
+                elif dv <= av:
+                    expected = [{"before": "b", "after": "a"}]
+            self.assertEqual(out["definite_orders"], expected)
+            self.assertEqual(len(out["uncertain_pairs"]), 0 if expected else 1)
+
     def test_touching_is_ordered_and_overlap_is_uncertain(self):
         out = analyze([{"id": "a", "start": 0, "end": 2},
                        {"id": "b", "start": 2, "end": 4},

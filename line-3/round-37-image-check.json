@@ -1,0 +1,29 @@
+{
+  "ancestor": "artifacts/line-3/wall-v19.png",
+  "ancestor_sha256": "bfe0b107c0010da29af791990f88c4179851bde0849bee1bd2f0641226e034de",
+  "donor_sha256": "8d97ef47d304259389bb9159ebade16e9f3fbc4529e816b073ebc76f69226279",
+  "patch_bounds_exclusive": [
+    893,
+    1117,
+    1005,
+    1182
+  ],
+  "changed_pixels": 6930,
+  "changed_outside_patch": 0,
+  "wall": {
+    "path": "artifacts/line-3/wall-v20.png",
+    "format": "PNG",
+    "width": 1254,
+    "height": 1254,
+    "color": "RGB8",
+    "bytes": 2849540,
+    "sha256": "78722c5a03ffec98760bfc169fbd9556b9b0303794e47566699acf41c1e750f9"
+  },
+  "preview": {
+    "path": "dist/line-3/37.jpg",
+    "format": "JPEG",
+    "width": 512,
+    "height": 512,
+    "bytes": 68551
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "number": 37,
+  "tool": {
+    "name": "Uncertainty Lens",
+    "tests_passed": 15,
+    "standard_library_only": true,
+    "checked_behavior": [
+      "Reproduced a false definite order caused by binary float parsing and verified exact decimal overlap instead",
+      "500 seeded decimal interval pairs compared with Fraction oracle",
+      "Tiny and large exponent points, equivalent decimal spellings, context independence and explicit numeric resource limits",
+      "All 10 inherited tests and original README demo pass"
+    ],
+    "limits": {
+      "input_bytes": 262144,
+      "events": 128,
+      "numeric_token_characters": 256,
+      "absolute_decimal_exponent": 10000
+    },
+    "unmet_requirements": []
+  },
+  "ancestor": "artifacts/line-3/wall-v19.png",
+  "ancestor_sha256": "bfe0b107c0010da29af791990f88c4179851bde0849bee1bd2f0641226e034de",
+  "donor_sha256": "8d97ef47d304259389bb9159ebade16e9f3fbc4529e816b073ebc76f69226279",
+  "patch_bounds_exclusive": [
+    893,
+    1117,
+    1005,
+    1182
+  ],
+  "changed_pixels": 6930,
+  "changed_outside_patch": 0,
+  "wall": {
+    "path": "artifacts/line-3/wall-v20.png",
+    "format": "PNG",
+    "width": 1254,
+    "height": 1254,
+    "color": "RGB8",
+    "bytes": 2849540,
+    "sha256": "78722c5a03ffec98760bfc169fbd9556b9b0303794e47566699acf41c1e750f9"
+  },
+  "preview": {
+    "path": "dist/line-3/37.jpg",
+    "format": "JPEG",
+    "width": 512,
+    "height": 512,
+    "bytes": 68551
+  },
+  "image_process": {
+    "tool": "Built-in image_gen.imagegen edit",
+    "prompt": "Use case: precise-object-edit. Add a single tiny prehistoric pigment motif on previously bare rock at x=800..910, y=1020..1060 in this 1254-square cave painting: two distinct small worn red ochre pebble dots with a very short charcoal dash between them and a tiny chalk tick above each. They represent preserving a very small separation. Keep the addition sparse and hand drawn. Preserve ALL existing paintings and Pepe, every old mark, rough warm rock texture, roots, cracks, torchlight, square size and framing unchanged. Earth pigments only. Do not add hands or handprints. No text, letters, numbers, captions, signatures, logos, watermark, border, frame, photography, 3D, real people or political symbols. Save generated output at artifacts/line-3/wall-v20.png if possible.",
+    "method": "Generated edit retained only inside empty-rock patch with a seven-pixel internal edge blend. All other decoded pixels restored from exact ancestor. Donor replaced by final wall; no extra image retained.",
+    "helpers": "Unmodified line-1/wall-render/finish_wall.js and its JPEG encoder"
+  },
+  "visual_review": {
+    "mark": "Two ochre pebbles keep their narrow separation beneath small chalk ticks.",
+    "pepe": "Inherited wide mouth, heavy-lidded eyes and whole figure unchanged.",
+    "hands": "No new hands or handprints. Existing individual digits remain too indistinct to count reliably.",
+    "letters_numbers_logos_watermarks_borders_observed": false,
+    "preserved": "1254-square dimensions, all older marks, rock, roots, cracks, torchlight and framing.",
+    "unmet_visual_requirements": [
+      "Inherited Pepe hand digits cannot be verified individually as five per hand."
+    ],
+    "limitations": [
+      "Local full-wall and preview visual review only, not independent visual approval.",
+      "Fine mark details reduce in the 512-pixel JPEG."
+    ]
+  }
+}
