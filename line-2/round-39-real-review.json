@@ -1,0 +1,241 @@
+[
+  {
+    "path": "dist/index.html",
+    "interpretation": "Actual workspace bytes reviewed as inert text; any matches in source may be deliberate parser/demo/test literals, not evidence of an attack.",
+    "report": {
+      "schema_version": 1,
+      "tool": "python-unicode/1",
+      "source_sha256": "43eb49e36101c19638536f252a710b92044b586adcd931f85a2cb9eb913ea05d",
+      "source_bytes": 83146,
+      "unicode_version": "15.0.0",
+      "analysis_complete": true,
+      "candidate_count": 0,
+      "counts_by_kind": {},
+      "detail_cap": 3,
+      "retained_details": 0,
+      "omitted_details": 0,
+      "details": [],
+      "limitations": [
+        "Lexical candidates only, not a Python tokenizer/parser: comments, raw strings, bytes literals and non-Python text are included.",
+        "No assertion that a candidate is interpreted by Python; string prefixes, quoting, f-strings, identifier grammar and rendering are outside scope.",
+        "Only backslash-u (4 hex), backslash-U (8 hex) and backslash-N names are reviewed; other backslash pairs are skipped, not decoded.",
+        "Named aliases use runtime Unicode tables; named sequences are rejected because Python named escapes require one code point.",
+        "Surrogates are preserved as code units, have no UTF-8 bytes and are not combined; no replacement or recursive decoding occurs.",
+        "Malformed hex stops before the first nonhex byte; malformed names stop before a backslash/newline. Later candidates remain visible.",
+        "Ranges are zero-based half-open original UTF-8 bytes. Lines and byte columns are one-based, LF-only.",
+        "Literal Unicode, other escape syntaxes and confusable fonts need separate review. No findings does not establish safety or benign intent.",
+        "ASCII JSON is safe for terminal display, not HTML embedding. Hashes establish byte identity, not authenticity."
+      ]
+    }
+  },
+  {
+    "path": "gathering/REPORT.md",
+    "interpretation": "Actual workspace bytes reviewed as inert text; any matches in source may be deliberate parser/demo/test literals, not evidence of an attack.",
+    "report": {
+      "schema_version": 1,
+      "tool": "python-unicode/1",
+      "source_sha256": "35136285559e19ab3aa35994fc6f10f578e089f0bb306e78b56f902abea9098a",
+      "source_bytes": 12382,
+      "unicode_version": "15.0.0",
+      "analysis_complete": true,
+      "candidate_count": 0,
+      "counts_by_kind": {},
+      "detail_cap": 3,
+      "retained_details": 0,
+      "omitted_details": 0,
+      "details": [],
+      "limitations": [
+        "Lexical candidates only, not a Python tokenizer/parser: comments, raw strings, bytes literals and non-Python text are included.",
+        "No assertion that a candidate is interpreted by Python; string prefixes, quoting, f-strings, identifier grammar and rendering are outside scope.",
+        "Only backslash-u (4 hex), backslash-U (8 hex) and backslash-N names are reviewed; other backslash pairs are skipped, not decoded.",
+        "Named aliases use runtime Unicode tables; named sequences are rejected because Python named escapes require one code point.",
+        "Surrogates are preserved as code units, have no UTF-8 bytes and are not combined; no replacement or recursive decoding occurs.",
+        "Malformed hex stops before the first nonhex byte; malformed names stop before a backslash/newline. Later candidates remain visible.",
+        "Ranges are zero-based half-open original UTF-8 bytes. Lines and byte columns are one-based, LF-only.",
+        "Literal Unicode, other escape syntaxes and confusable fonts need separate review. No findings does not establish safety or benign intent.",
+        "ASCII JSON is safe for terminal display, not HTML embedding. Hashes establish byte identity, not authenticity."
+      ]
+    }
+  },
+  {
+    "path": "line-2/tools/python-unicode/python_unicode.py",
+    "interpretation": "Actual workspace bytes reviewed as inert text; any matches in source may be deliberate parser/demo/test literals, not evidence of an attack.",
+    "report": {
+      "schema_version": 1,
+      "tool": "python-unicode/1",
+      "source_sha256": "efd8430ea229687a1e192fcaa500b52194e7d901476bbabff67d9e48ced12f77",
+      "source_bytes": 7151,
+      "unicode_version": "15.0.0",
+      "analysis_complete": true,
+      "candidate_count": 3,
+      "counts_by_kind": {
+        "non-ascii-or-control": 3
+      },
+      "detail_cap": 3,
+      "retained_details": 3,
+      "omitted_details": 0,
+      "details": [
+        {
+          "source_byte_range": [
+            328,
+            334
+          ],
+          "source_line": 14,
+          "source_byte_column": 22,
+          "source_escape_hex": "5c7530343536",
+          "source_span_sha256": "1bf9715038d521eefde9f587b3ed58542e5302534223075bf9428769e0622bfc",
+          "form": "u",
+          "kind": "non-ascii-or-control",
+          "issue": null,
+          "decoded_codepoint": {
+            "codepoint": "U+0456",
+            "name": "CYRILLIC SMALL LETTER BYELORUSSIAN-UKRAINIAN I",
+            "category": "Ll",
+            "utf8_hex": "d196"
+          }
+        },
+        {
+          "source_byte_range": [
+            351,
+            377
+          ],
+          "source_line": 14,
+          "source_byte_column": 45,
+          "source_escape_hex": "5c4e7b52494748542d544f2d4c454654204f564552524944457d",
+          "source_span_sha256": "b89e303d3921bef7bc2b7300ef91d4aec529d583d23737adfb02710cfe788692",
+          "form": "N",
+          "kind": "non-ascii-or-control",
+          "issue": null,
+          "decoded_codepoint": {
+            "codepoint": "U+202E",
+            "name": "RIGHT-TO-LEFT OVERRIDE",
+            "category": "Cf",
+            "utf8_hex": "e280ae"
+          }
+        },
+        {
+          "source_byte_range": [
+            388,
+            398
+          ],
+          "source_line": 14,
+          "source_byte_column": 82,
+          "source_escape_hex": "5c553030303146343338",
+          "source_span_sha256": "c778e3613c1078b480ffc55b466d620fce8c5da67695eb28f1a606be371e7239",
+          "form": "U",
+          "kind": "non-ascii-or-control",
+          "issue": null,
+          "decoded_codepoint": {
+            "codepoint": "U+1F438",
+            "name": "FROG FACE",
+            "category": "So",
+            "utf8_hex": "f09f90b8"
+          }
+        }
+      ],
+      "limitations": [
+        "Lexical candidates only, not a Python tokenizer/parser: comments, raw strings, bytes literals and non-Python text are included.",
+        "No assertion that a candidate is interpreted by Python; string prefixes, quoting, f-strings, identifier grammar and rendering are outside scope.",
+        "Only backslash-u (4 hex), backslash-U (8 hex) and backslash-N names are reviewed; other backslash pairs are skipped, not decoded.",
+        "Named aliases use runtime Unicode tables; named sequences are rejected because Python named escapes require one code point.",
+        "Surrogates are preserved as code units, have no UTF-8 bytes and are not combined; no replacement or recursive decoding occurs.",
+        "Malformed hex stops before the first nonhex byte; malformed names stop before a backslash/newline. Later candidates remain visible.",
+        "Ranges are zero-based half-open original UTF-8 bytes. Lines and byte columns are one-based, LF-only.",
+        "Literal Unicode, other escape syntaxes and confusable fonts need separate review. No findings does not establish safety or benign intent.",
+        "ASCII JSON is safe for terminal display, not HTML embedding. Hashes establish byte identity, not authenticity."
+      ]
+    }
+  },
+  {
+    "path": "line-2/tools/python-unicode/test_python_unicode.py",
+    "interpretation": "Actual workspace bytes reviewed as inert text; any matches in source may be deliberate parser/demo/test literals, not evidence of an attack.",
+    "report": {
+      "schema_version": 1,
+      "tool": "python-unicode/1",
+      "source_sha256": "6514a417e75153f3d44e18a50ebda80f13eb7fb8110ffc3491ebbe6b781f3c19",
+      "source_bytes": 6760,
+      "unicode_version": "15.0.0",
+      "analysis_complete": true,
+      "candidate_count": 32,
+      "counts_by_kind": {
+        "ascii": 7,
+        "malformed": 13,
+        "non-ascii-or-control": 9,
+        "surrogate-code-unit": 3
+      },
+      "detail_cap": 3,
+      "retained_details": 3,
+      "omitted_details": 29,
+      "details": [
+        {
+          "source_byte_range": [
+            750,
+            756
+          ],
+          "source_line": 28,
+          "source_byte_column": 30,
+          "source_escape_hex": "5c7530303431",
+          "source_span_sha256": "94f9a7aeb95e789ab128bb889c8c685febd44e8eeda5f7f2747ccaf9805b5cfa",
+          "form": "u",
+          "kind": "ascii",
+          "issue": null,
+          "decoded_codepoint": {
+            "codepoint": "U+0041",
+            "name": "LATIN CAPITAL LETTER A",
+            "category": "Lu",
+            "utf8_hex": "41"
+          }
+        },
+        {
+          "source_byte_range": [
+            757,
+            767
+          ],
+          "source_line": 28,
+          "source_byte_column": 37,
+          "source_escape_hex": "5c553030303030303432",
+          "source_span_sha256": "a967443c7ef4c0c14203c81624e2c9e67c3bb8399699b9f21ea4adcbbf6d94fc",
+          "form": "U",
+          "kind": "ascii",
+          "issue": null,
+          "decoded_codepoint": {
+            "codepoint": "U+0042",
+            "name": "LATIN CAPITAL LETTER B",
+            "category": "Lu",
+            "utf8_hex": "42"
+          }
+        },
+        {
+          "source_byte_range": [
+            853,
+            859
+          ],
+          "source_line": 29,
+          "source_byte_column": 83,
+          "source_escape_hex": "5c7530303431",
+          "source_span_sha256": "94f9a7aeb95e789ab128bb889c8c685febd44e8eeda5f7f2747ccaf9805b5cfa",
+          "form": "u",
+          "kind": "ascii",
+          "issue": null,
+          "decoded_codepoint": {
+            "codepoint": "U+0041",
+            "name": "LATIN CAPITAL LETTER A",
+            "category": "Lu",
+            "utf8_hex": "41"
+          }
+        }
+      ],
+      "limitations": [
+        "Lexical candidates only, not a Python tokenizer/parser: comments, raw strings, bytes literals and non-Python text are included.",
+        "No assertion that a candidate is interpreted by Python; string prefixes, quoting, f-strings, identifier grammar and rendering are outside scope.",
+        "Only backslash-u (4 hex), backslash-U (8 hex) and backslash-N names are reviewed; other backslash pairs are skipped, not decoded.",
+        "Named aliases use runtime Unicode tables; named sequences are rejected because Python named escapes require one code point.",
+        "Surrogates are preserved as code units, have no UTF-8 bytes and are not combined; no replacement or recursive decoding occurs.",
+        "Malformed hex stops before the first nonhex byte; malformed names stop before a backslash/newline. Later candidates remain visible.",
+        "Ranges are zero-based half-open original UTF-8 bytes. Lines and byte columns are one-based, LF-only.",
+        "Literal Unicode, other escape syntaxes and confusable fonts need separate review. No findings does not establish safety or benign intent.",
+        "ASCII JSON is safe for terminal display, not HTML embedding. Hashes establish byte identity, not authenticity."
+      ]
+    }
+  }
+]

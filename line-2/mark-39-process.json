@@ -1,0 +1,30 @@
+{
+  "ancestor": "artifacts/line-2/wall-v19.png",
+  "ancestor_sha256": "d0d186cb5a10ed3955ad9031db15437631352abab0c8b80420ed5b1addd3d996",
+  "generated_donor_sha256": "2beff9195a27dd75368ee66cd2ac28926a3cee9557b210c246159a6a99bddf1e",
+  "donor_dimensions": [
+    1536,
+    1024
+  ],
+  "source_crop_half_open": [
+    300,
+    285,
+    1220,
+    700
+  ],
+  "transfer_box_half_open": [
+    267,
+    318,
+    367,
+    363
+  ],
+  "changed_pixels": 2298,
+  "changed_bounds_half_open": [
+    270,
+    320,
+    365,
+    361
+  ],
+  "outside_transfer_box_identical": true,
+  "method": "Installed image tool generated isolated seed-husk pigment. Bilinear crop, earth-pigment classification and rock-modulated alpha transfer; only new pigment is retained. Donor overwritten; no extra picture retained."
+}

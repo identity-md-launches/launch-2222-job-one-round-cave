@@ -1,0 +1,30 @@
+{
+  "name": "The Named Seed",
+  "image": "https://api.imd.fun/artifacts/782f80a4724fd372bebd197bb3b076fcf6ef7fb252aaa705b829ee44122e290d",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Roots"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 2"
+    },
+    {
+      "trait_type": "Number",
+      "value": 39
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Python Unicode"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "An opened ochre seed husk reveals the dark pebble hidden within."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Expose deceptive Unicode in text and identifiers with precise, reviewable evidence"
+    }
+  ]
+}

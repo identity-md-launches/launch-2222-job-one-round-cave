@@ -1,0 +1,13 @@
+{
+  "new_record": 39,
+  "record_shape_and_wall_hash_match": true,
+  "goal_bytes_unchanged": true,
+  "older_records_and_previews_unchanged": true,
+  "only_assigned_paths_changed": true,
+  "new_files_outside_artifacts_under_100000_bytes": true,
+  "named_wall_output_exists_and_is_untracked": true,
+  "wall_alias_points_to_v20": true,
+  "local_tests": "15 passed; maximum-size dense/name probes passed",
+  "media_report": "line-2/round-39-media.json",
+  "limitations": "Local structural, behavior and visual checks; no independent certification."
+}

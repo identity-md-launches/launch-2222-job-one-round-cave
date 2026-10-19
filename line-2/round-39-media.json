@@ -1,0 +1,52 @@
+{
+  "wall": {
+    "path": "artifacts/line-2/wall-v20.png",
+    "alias": "artifacts/line-2/wall.png",
+    "format": "PNG",
+    "mode": "RGB8",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "bytes": 3977818,
+    "sha256": "782f80a4724fd372bebd197bb3b076fcf6ef7fb252aaa705b829ee44122e290d"
+  },
+  "preview": {
+    "path": "dist/line-2/39.jpg",
+    "format": "baseline JPEG",
+    "dimensions": [
+      512,
+      512
+    ],
+    "bytes": 91148,
+    "sha256": "692df3f77b477a1ce3a676ed2c8a47e4bcb90f5d8b213818b6224d6e216e7349"
+  },
+  "preservation": {
+    "ancestor": "artifacts/line-2/wall-v19.png",
+    "changed_pixels": 2298,
+    "transfer_box_half_open": [
+      267,
+      318,
+      367,
+      363
+    ],
+    "all_pixels_outside_transfer_box_identical": true,
+    "size_rock_cracks_lighting_framing_and_existing_marks_retained": true
+  },
+  "visual_review": {
+    "method": "Full PNG and 512px JPEG viewed locally after pigment transfer.",
+    "subject": "Inherited Pepe the frog, wide mouth and heavy-lidded eyes.",
+    "hands": "Both inherited hands unchanged; five digits observed per hand (four fingers and a thumb). No hands or stencils added.",
+    "observed_forbidden_elements": [],
+    "unmet_visual_requirements": [],
+    "limitations": [
+      "Local visual observation, not independent approval. Fine pigment detail reduces in the 512px preview."
+    ]
+  },
+  "image_generation": {
+    "tool": "mcp__image__generate_image",
+    "prompt": "line-2/mark-39-prompt.txt",
+    "process": "line-2/mark-39-process.json",
+    "extra_images_retained": false
+  }
+}

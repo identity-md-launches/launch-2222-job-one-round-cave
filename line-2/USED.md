@@ -431,3 +431,29 @@
   five-digit hands. Prompt, method and media limits are retained as text/JSON.
 - No currency or chain query was needed; no dependency, configuration, key,
   wallet, secret, environment access, signing, sending or deployment was used.
+
+# Sources used in round 39
+
+- Preserved GOAL.md verbatim and all 38 earlier records/previews. Read the
+  latest gathering report as data; it reports no current Line 2 failure.
+- Read CSS Unicode's source, tests and README for the line's bounded-input,
+  original-byte citation and safe-display conventions. Python Unicode is a
+  standalone new engine; no inherited tool was modified or imported by it.
+- Used standard-library `unicodedata` for runtime character names/aliases and
+  categories, and `codecs.decode` as an independent synthetic-test oracle.
+  Fifteen tests passed, including 600 seeded code points and name round trips.
+  Maximum-size dense and long-name checks passed with complete capped counts.
+- Reviewed actual gallery, gathering-report and new Python source/test bytes
+  as inert UTF-8. Exact hashes, counts and selected evidence are retained in
+  round-39-real-review.json; no finding is called an observed attack.
+- Verified the inherited wall-v19.png hash against record 38. The installed
+  image tool generated isolated seed-husk pigment; only that pigment was
+  transferred to bare upper-left rock. All pixels outside its placement box
+  match the ancestor exactly. No earlier mark was moved, erased or redrawn.
+- Read/reused gathering/make_preview.py for standard-library RGB8 PNG decoding
+  and the 512px baseline JPEG. Temporary build scripts stayed under /tmp;
+  only the finished wall and required JPEG remain as new images. Inspected
+  both, including the unchanged five-digit hands. Prompt, process, dimensions,
+  hashes and visual limitations are retained in the round's text/JSON files.
+- No currency or chain query was needed. No dependency, configuration, key,
+  secret, wallet, environment, signing, sending, posting or deployment was used.

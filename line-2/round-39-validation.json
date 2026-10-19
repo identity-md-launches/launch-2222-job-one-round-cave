@@ -1,0 +1,33 @@
+{
+  "tool": "Python Unicode",
+  "tests": {
+    "command": "python3 -B -m unittest discover -s line-2/tools/python-unicode -v",
+    "tests_run": 15,
+    "failures": 0,
+    "errors": 0,
+    "observed_status": 0
+  },
+  "oracle": "600 seeded code points compared with codecs.decode(..., unicode_escape), plus available Unicode names; aliases and named-sequence rejection separately checked.",
+  "synthetic_demo": {
+    "observed_status": 0,
+    "codepoints": [
+      "U+0456",
+      "U+202E",
+      "U+1F438"
+    ]
+  },
+  "bounded_stress": {
+    "source_bytes": 2097152,
+    "candidate_count": 349525,
+    "max_details": 0,
+    "retained_details": 0,
+    "complete_counts": true,
+    "maximum_size_named_candidate_rejected": true,
+    "elapsed_seconds": 0.404
+  },
+  "limitations": [
+    "Lexical candidates are not a Python parse or an intent/safety verdict. Raw strings, comments and bytes literals can match without Python interpretation.",
+    "No literal-Unicode analysis, font rendering, recursive decoding or surrogate-pair combining.",
+    "Checks are local observations, not independent certification."
+  ]
+}
